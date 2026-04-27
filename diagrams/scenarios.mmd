@@ -1,0 +1,34 @@
+graph LR
+    subgraph Baseline["Scenario 1: Baseline (no property)"]
+        direction LR
+        GW1["ER Gateway"] -->|"10.0.0.0/16"| MSEE1["MSEE / On-Prem"]
+        GW1 -->|"10.1.0.0/16"| MSEE1
+        GW1 -->|"10.2.0.0/16"| MSEE1
+    end
+
+    subgraph Supernet["Scenario 3: Supernet 10.0.0.0/14"]
+        direction LR
+        GW3["ER Gateway"] -->|"10.0.0.0/14 ✅"| MSEE3["MSEE / On-Prem"]
+    end
+
+    subgraph NonOverlap["Scenario 4: Non-overlapping 172.16.0.0/16"]
+        direction LR
+        GW4["ER Gateway"] -->|"172.16.0.0/16 ⚠️"| MSEE4["MSEE / On-Prem"]
+        GW4 -->|"10.1.0.0/16"| MSEE4
+        GW4 -->|"10.2.0.0/16"| MSEE4
+    end
+
+    subgraph Partial["Scenario 5: Partial 10.0.0.0/15"]
+        direction LR
+        GW5["ER Gateway"] -->|"10.0.0.0/15 ✅"| MSEE5["MSEE / On-Prem"]
+        GW5 -->|"10.2.0.0/16"| MSEE5
+    end
+
+    style GW1 fill:#0078D4,color:#fff
+    style GW3 fill:#0078D4,color:#fff
+    style GW4 fill:#0078D4,color:#fff
+    style GW5 fill:#0078D4,color:#fff
+    style MSEE1 fill:#e1d5e7,stroke:#9673a6
+    style MSEE3 fill:#e1d5e7,stroke:#9673a6
+    style MSEE4 fill:#e1d5e7,stroke:#9673a6
+    style MSEE5 fill:#e1d5e7,stroke:#9673a6

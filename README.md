@@ -27,41 +27,9 @@ The `summarizedGatewayPrefixes` property is a **new VNet-level setting** (API ve
 
 ## Lab Topology
 
-```
-                    On-Premises (simulated by Megaport MCR)
-                              │
-                    ┌─────────┴─────────┐
-                    │  Megaport MCR      │
-                    │  (Frankfurt)       │
-                    │  ASN 133937        │
-                    └─────────┬─────────┘
-                         VXC (pri+sec)
-                              │
-                    ┌─────────┴─────────┐
-                    │  ER Circuit        │
-                    │  50 Mbps, Standard │
-                    │  Stockholm         │
-                    └─────────┬─────────┘
-                              │
-                    ┌─────────┴─────────┐
-                    │  ER Gateway        │
-                    │  Standard SKU      │
-                    │  10.0.0.12/13      │
-                    └─────────┬─────────┘
-                              │
-               ┌──────────────┼──────────────┐
-               │              │              │
-        ┌──────┴──────┐ ┌────┴────┐  ┌──────┴──────┐
-        │  Hub VNet   │ │         │  │             │
-        │ 10.0.0.0/16 │ │ Peering │  │   Peering   │
-        └─────────────┘ │         │  │             │
-                        ├─────────┤  ├─────────────┤
-                  ┌─────┴─────┐  ┌───┴───────┐
-                  │ Spoke1    │  │ Spoke2    │
-                  │ 10.1.0.0  │  │ 10.2.0.0  │
-                  │ /16       │  │ /16       │
-                  └───────────┘  └───────────┘
-```
+![Lab Topology](diagrams/topology.png)
+
+> 📂 Editable draw.io files available in the [diagrams/](diagrams/) folder.
 
 ## Lab Setup (Azure CLI)
 
@@ -176,6 +144,12 @@ az rest --method PUT \
 ---
 
 ## Test Scenarios & Results
+
+### Route Advertisement Comparison
+
+![Scenario Comparison](diagrams/scenarios.png)
+
+---
 
 ### Scenario 1: Baseline — No `summarizedGatewayPrefixes`
 

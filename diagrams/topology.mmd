@@ -1,0 +1,43 @@
+graph TD
+    subgraph On-Premises["🏢 On-Premises (Simulated)"]
+        MCR["<b>Megaport MCR</b><br/>Frankfurt - Equinix FR5<br/>ASN 133937<br/>1000 Mbps"]
+    end
+
+    MCR -->|"VXC Primary + Secondary<br/>50 Mbps"| ER
+
+    subgraph ER["📡 ExpressRoute"]
+        CIRCUIT["<b>ER Circuit</b><br/>50 Mbps, Standard<br/>Stockholm Peering Location<br/>Private Peering: VLAN 100"]
+    end
+
+    CIRCUIT -->|"ER Connection"| GW
+
+    subgraph Azure["☁️ Azure (swedencentral)"]
+        GW["<b>ER Gateway</b><br/>Standard SKU<br/>10.0.0.12 / 10.0.0.13"]
+        GW --> HUB
+        
+        subgraph HubVNet["Hub VNet - 10.0.0.0/16"]
+            HUB["<b>hub-vnet</b><br/>GatewaySubnet: 10.0.0.0/27<br/><br/><i>summarizedGatewayPrefixes</i><br/>⬆️ Property Under Test"]
+        end
+        
+        HUB -.-|"Peering<br/>gateway transit"| S1
+        HUB -.-|"Peering<br/>gateway transit"| S2
+        
+        subgraph Spoke1["Spoke1 VNet"]
+            S1["<b>spoke1-vnet</b><br/>10.1.0.0/16"]
+        end
+        
+        subgraph Spoke2["Spoke2 VNet"]
+            S2["<b>spoke2-vnet</b><br/>10.2.0.0/16"]
+        end
+    end
+
+    style MCR fill:#fff2cc,stroke:#d6b656,stroke-width:2px
+    style CIRCUIT fill:#e1d5e7,stroke:#9673a6,stroke-width:2px
+    style GW fill:#0078D4,stroke:#005a9e,color:#fff,stroke-width:2px
+    style HUB fill:#d5e8d4,stroke:#82b366,stroke-width:3px
+    style S1 fill:#fff2cc,stroke:#d6b656,stroke-width:2px
+    style S2 fill:#fff2cc,stroke:#d6b656,stroke-width:2px
+    style Azure fill:#dae8fc,stroke:#6c8ebf
+    style HubVNet fill:#d5e8d4,stroke:#82b366
+    style Spoke1 fill:#fff2cc,stroke:#d6b656
+    style Spoke2 fill:#fff2cc,stroke:#d6b656

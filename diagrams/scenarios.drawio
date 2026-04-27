@@ -1,0 +1,151 @@
+<mxfile host="Copilot" modified="2025-04-27" type="device">
+  <diagram name="Scenario 1 - Baseline" id="s1">
+    <mxGraphModel dx="800" dy="400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="200">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title1" value="&lt;b&gt;Scenario 1: Baseline&lt;/b&gt; (no summarizedGatewayPrefixes)" style="text;html=1;fontSize=14;align=left;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="gw1" value="&lt;b&gt;ER Gateway&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;fontColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="msee1" value="&lt;b&gt;MSEE / On-Prem&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="580" y="60" width="140" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="r1a" value="10.0.0.0/16 (hub)" style="text;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="260" y="30" width="140" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="r1b" value="10.1.0.0/16 (spoke1)" style="text;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="260" y="60" width="150" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="r1c" value="10.2.0.0/16 (spoke2)" style="text;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="260" y="90" width="150" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1a" edge="1" parent="1" source="gw1" target="r1a" style="html=1;strokeColor=#82b366;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1b" edge="1" parent="1" source="gw1" target="r1b" style="html=1;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1c" edge="1" parent="1" source="gw1" target="r1c" style="html=1;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1d" edge="1" parent="1" source="r1a" target="msee1" style="html=1;strokeColor=#82b366;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1e" edge="1" parent="1" source="r1b" target="msee1" style="html=1;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1f" edge="1" parent="1" source="r1c" target="msee1" style="html=1;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Scenario 3 - Supernet" id="s3">
+    <mxGraphModel dx="800" dy="400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="200">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title3" value="&lt;b&gt;Scenario 3: Supernet&lt;/b&gt; (10.0.0.0/14 covers all)" style="text;html=1;fontSize=14;align=left;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="gw3" value="&lt;b&gt;ER Gateway&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;fontColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="msee3" value="&lt;b&gt;MSEE / On-Prem&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="580" y="60" width="140" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="r3a" value="&lt;b&gt;10.0.0.0/14&lt;/b&gt; ✅ (replaces all 3)" style="text;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=12;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="250" y="60" width="210" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3a" edge="1" parent="1" source="gw3" target="r3a" style="html=1;strokeColor=#82b366;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3b" edge="1" parent="1" source="r3a" target="msee3" style="html=1;strokeColor=#82b366;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Scenario 4 - Non-overlapping" id="s4">
+    <mxGraphModel dx="800" dy="400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="200">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title4" value="&lt;b&gt;Scenario 4: Non-overlapping&lt;/b&gt; (172.16.0.0/16)" style="text;html=1;fontSize=14;align=left;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="gw4" value="&lt;b&gt;ER Gateway&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;fontColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="msee4" value="&lt;b&gt;MSEE / On-Prem&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="580" y="60" width="140" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4a" value="&lt;b&gt;172.16.0.0/16&lt;/b&gt; ⚠️ (replaces hub)" style="text;html=1;fillColor=#f8cecc;strokeColor=#b85450;rounded=1;fontSize=11;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="250" y="30" width="210" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4b" value="10.1.0.0/16 (spoke1 unchanged)" style="text;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="60" width="210" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4c" value="10.2.0.0/16 (spoke2 unchanged)" style="text;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="90" width="210" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4a" edge="1" parent="1" source="gw4" target="r4a" style="html=1;strokeColor=#b85450;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4b" edge="1" parent="1" source="gw4" target="r4b" style="html=1;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4c" edge="1" parent="1" source="gw4" target="r4c" style="html=1;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4d" edge="1" parent="1" source="r4a" target="msee4" style="html=1;strokeColor=#b85450;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4e" edge="1" parent="1" source="r4b" target="msee4" style="html=1;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4f" edge="1" parent="1" source="r4c" target="msee4" style="html=1;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Scenario 5 - Partial" id="s5">
+    <mxGraphModel dx="800" dy="400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="200">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title5" value="&lt;b&gt;Scenario 5: Partial supernet&lt;/b&gt; (10.0.0.0/15 covers hub+spoke1)" style="text;html=1;fontSize=14;align=left;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="450" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="gw5" value="&lt;b&gt;ER Gateway&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;fontColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="msee5" value="&lt;b&gt;MSEE / On-Prem&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="580" y="60" width="140" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="r5a" value="&lt;b&gt;10.0.0.0/15&lt;/b&gt; ✅ (hub+spoke1)" style="text;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontSize=11;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="250" y="45" width="210" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="r5b" value="10.2.0.0/16 (spoke2 unchanged)" style="text;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="80" width="210" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5a" edge="1" parent="1" source="gw5" target="r5a" style="html=1;strokeColor=#82b366;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5b" edge="1" parent="1" source="gw5" target="r5b" style="html=1;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5c" edge="1" parent="1" source="r5a" target="msee5" style="html=1;strokeColor=#82b366;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5d" edge="1" parent="1" source="r5b" target="msee5" style="html=1;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
