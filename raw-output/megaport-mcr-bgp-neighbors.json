@@ -1,0 +1,48 @@
+{
+  "primary_vxc": {
+    "vxc_uid": "5cf0c7f7-a8f3-45a8-a5cc-ffc12bd7eade",
+    "b_end_vlan": 6,
+    "bgp_session": {
+      "peer_ip": "169.254.247.210",
+      "peer_asn": 12076,
+      "local_asn": 133937,
+      "subnet": "169.254.247.209/30",
+      "ip_mtu": 1500,
+      "peer_type": "PRIV_CLOUD",
+      "inner_vlan": 100,
+      "local_ip": "169.254.247.209",
+      "status": "established"
+    },
+    "a_end_vlan": 772,
+    "vxc_name": "lab-sgp-vxc-pri-20260427",
+    "vll_status": "up"
+  },
+  "collected_at": "2026-04-27T15:49:58Z",
+  "azure_peering": {
+    "secondary_subnet": "169.254.247.212/30",
+    "azure_vlan": 100,
+    "peering_type": "private",
+    "peer_asn": 133937,
+    "primary_subnet": "169.254.247.208/30"
+  },
+  "mcr_uid": "01c13548-18dd-4b9a-8d43-e5b2e42bada7",
+  "secondary_vxc": {
+    "vxc_uid": "89066791-047f-47f0-91cd-19f71b017b56",
+    "b_end_vlan": 6,
+    "bgp_session": {
+      "peer_ip": "169.254.247.214",
+      "peer_asn": 12076,
+      "local_asn": 133937,
+      "subnet": "169.254.247.213/30",
+      "ip_mtu": 1500,
+      "peer_type": "PRIV_CLOUD",
+      "inner_vlan": 100,
+      "local_ip": "169.254.247.213",
+      "status": "established"
+    },
+    "a_end_vlan": 772,
+    "vxc_name": "lab-sgp-vxc-sec-20260427",
+    "vll_status": "up"
+  },
+  "note": "BGP route table endpoint (/v2/product/mcr2/{uid}/diagnostics/routes/bgp) returns empty array. BGP session details extracted from VXC resources instead."
+}
