@@ -371,3 +371,32 @@ Network      NextHop    Origin    AsPath    Weight
 | **Megaport MCR** | Frankfurt (Equinix FR5), ASN 133937 |
 | **API Version** | `2025-07-01` |
 | **Created by** | GitHub Copilot CLI (azure-lab skill) |
+
+## Raw Output
+
+All raw command output (JSON) from Azure CLI and Megaport API is stored in the [`raw-output/`](raw-output/) folder:
+
+| File | Description |
+|------|-------------|
+| `scenario6-ergw-advertised.json` | ER Gateway advertised routes (baseline, after clearing property) |
+| `scenario6-er-circuit-routes.json` | ER Circuit route table (baseline) |
+| `scenario6-ergw-learned.json` | ER Gateway learned routes |
+| `hub-vnet-definition.json` | Full hub VNet definition (API version 2025-07-01) |
+| `megaport-mcr-details.json` | MCR product details from Megaport API |
+| `megaport-vxc-primary-details.json` | Primary VXC details including BGP session config |
+| `megaport-vxc-secondary-details.json` | Secondary VXC details including BGP session config |
+| `megaport-mcr-bgp-routes.json` | MCR BGP route table (empty — see note below) |
+
+### Note on Megaport MCR Route Collection
+
+The Megaport API endpoint `GET /v2/product/mcr2/{uid}/diagnostics/routes/bgp` returns `200 OK` but with an empty array `[]` for this MCR. BGP sessions are confirmed as **established** (`bgp_status: 1`) on both primary and secondary VXCs. The empty route table response appears to be an API limitation — possibly related to the cross-region MCR↔VXC setup (MCR in Frankfurt, ER circuit in Stockholm) or the demo account type. The VXC resource details do confirm the BGP peering configuration:
+
+- **Primary VXC:** MCR peer `169.254.247.209/30` ↔ MSEE `169.254.247.210`, ASN 133937 ↔ 12076
+- **Secondary VXC:** MCR peer `169.254.247.213/30` ↔ MSEE `169.254.247.214`, ASN 133937 ↔ 12076
+
+## Editable Diagrams
+
+The [`diagrams/`](diagrams/) folder contains:
+- **`.drawio`** files — open in [draw.io](https://app.diagrams.net) for editing
+- **`.mmd`** files — Mermaid source (can be edited and re-exported with `mmdc`)
+- **`.png`** files — rendered images embedded in this README

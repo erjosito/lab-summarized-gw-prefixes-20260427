@@ -1,0 +1,28 @@
+{
+  "value": [
+    {
+      "asPath": "65515",
+      "localAddress": "10.0.0.12",
+      "network": "10.2.0.0/16",
+      "nextHop": "10.0.0.12",
+      "origin": "Igp",
+      "weight": 0
+    },
+    {
+      "asPath": "65515",
+      "localAddress": "10.0.0.12",
+      "network": "10.0.0.0/16",
+      "nextHop": "10.0.0.12",
+      "origin": "Igp",
+      "weight": 0
+    },
+    {
+      "asPath": "65515",
+      "localAddress": "10.0.0.12",
+      "network": "10.1.0.0/16",
+      "nextHop": "10.0.0.12",
+      "origin": "Igp",
+      "weight": 0
+    }
+  ]
+}

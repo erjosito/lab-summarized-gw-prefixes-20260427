@@ -1,0 +1,169 @@
+{
+  "productId": 286181,
+  "productUid": "5cf0c7f7-a8f3-45a8-a5cc-ffc12bd7eade",
+  "productName": "lab-sgp-vxc-pri-20260427",
+  "secondaryName": null,
+  "productType": "VXC",
+  "rateLimit": 50,
+  "maximumRate": 1000,
+  "distanceBand": "ZONE",
+  "provisioningStatus": "LIVE",
+  "usageAlgorithm": "POST_PAID_HOURLY_SPEED_LONG_HAUL_VXC",
+  "createdBy": "dbb1e1f8-0861-423b-b85c-e71256d4a486",
+  "liveDate": 1777285042015,
+  "createDate": 1777284699620,
+  "resources": {
+    "csp_connection": [
+      {
+        "connectType": "VROUTER",
+        "resource_name": "a_csp_connection",
+        "resource_type": "csp_connection",
+        "vlan": 772,
+        "bgp_peers": [
+          "169.254.247.210"
+        ],
+        "bgp_status": {
+          "169.254.247.210": 1
+        },
+        "interfaces": [
+          {
+            "bgpConnections": [
+              {
+                "localAsn": 133937,
+                "localIpAddress": "169.254.247.209",
+                "peerAsn": 12076,
+                "peerIpAddress": "169.254.247.210",
+                "peerType": "PRIV_CLOUD",
+                "shutdown": false
+              }
+            ],
+            "ipAddresses": [
+              "169.254.247.209/30"
+            ],
+            "vlan": 100,
+            "ipMtu": 1500
+          }
+        ],
+        "ip_addresses": [
+          "169.254.247.209/30"
+        ],
+        "virtualRouterName": ""
+      },
+      {
+        "bandwidth": 50,
+        "connectType": "AZURE",
+        "managed": true,
+        "megaports": [
+          {
+            "port": 49572,
+            "type": "primary",
+            "vxc": 286181
+          },
+          {
+            "port": 49573,
+            "type": "secondary",
+            "vxc": 286182
+          }
+        ],
+        "ports": [
+          {
+            "service_id": 111141,
+            "type": "primary",
+            "vxc_service_ids": [
+              851020
+            ],
+            "firstVxcServiceId": 851020
+          },
+          {
+            "service_id": 111142,
+            "type": "secondary",
+            "vxc_service_ids": [
+              851022
+            ],
+            "firstVxcServiceId": 851022
+          }
+        ],
+        "peers": [
+          {
+            "peer_asn": 133937,
+            "primary_subnet": "169.254.247.208/30",
+            "secondary_subnet": "169.254.247.212/30",
+            "type": "private",
+            "vlan": 100
+          }
+        ],
+        "resource_name": "b_csp_connection",
+        "resource_type": "csp_connection",
+        "service_key": "REDACTED-SERVICE-KEY",
+        "vlan": 6
+      }
+    ],
+    "vll": {
+      "a_vlan": 772,
+      "b_vlan": 6,
+      "a_inner_vlan": 3468,
+      "rate_limit_mbps": 50,
+      "resource_name": "vll",
+      "resource_type": "vll",
+      "up": 1,
+      "shutdown": false,
+      "ainnerVlan": 3468
+    }
+  },
+  "vxcApproval": {
+    "status": null,
+    "message": null,
+    "uid": null,
+    "type": null,
+    "newSpeed": null
+  },
+  "contractStartDate": 1777285042018,
+  "contractEndDate": 1779804000000,
+  "contractTermMonths": 1,
+  "autoRenewTerm": false,
+  "companyUid": "d594938d-b56f-42d8-b66e-f71ac55a46d5",
+  "companyName": "Microsoft AU Demo",
+  "locked": false,
+  "adminLocked": false,
+  "attributeTags": {},
+  "up": true,
+  "shutdown": false,
+  "cancelable": true,
+  "aEnd": {
+    "ownerUid": "d594938d-b56f-42d8-b66e-f71ac55a46d5",
+    "productUid": "01c13548-18dd-4b9a-8d43-e5b2e42bada7",
+    "productName": "lab-sgp-mcr-20260427",
+    "locationId": 131,
+    "location": "Equinix Frankfurt FR5",
+    "locationDetail": {
+      "name": "Equinix Frankfurt FR5",
+      "city": "Frankfurt",
+      "metro": "Frankfurt",
+      "country": "Germany"
+    },
+    "vlan": 772,
+    "innerVlan": 3468,
+    "secondaryName": null,
+    "connectType": "VROUTER",
+    "diversityZone": "blue",
+    "vNicIndex": 6
+  },
+  "bEnd": {
+    "ownerUid": "c40de5ed-4707-4471-a78c-69436de2c505",
+    "productUid": "33a0e453-cf03-45f6-9d95-a3f4dfc32a97",
+    "productName": "Stockholm Primary",
+    "locationId": 95,
+    "location": "Equinix Stockholm SK1",
+    "locationDetail": {
+      "name": "Equinix Stockholm SK1",
+      "city": "Stockholm",
+      "metro": "Stockholm",
+      "country": "Sweden"
+    },
+    "vlan": 6,
+    "innerVlan": null,
+    "secondaryName": null,
+    "connectType": "AZURE",
+    "diversityZone": "red"
+  }
+}

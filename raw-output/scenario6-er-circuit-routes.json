@@ -1,0 +1,61 @@
+WARNING: This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus
+{
+  "value": [
+    {
+      "locPrf": "100",
+      "network": "10.0.0.0/16",
+      "nextHop": "10.0.0.12*",
+      "path": "65515 I\n                    ",
+      "weight": 0
+    },
+    {
+      "locPrf": "100",
+      "network": "10.0.0.0/16",
+      "nextHop": "10.0.0.13",
+      "path": "65515 I\n                    ",
+      "weight": 0
+    },
+    {
+      "locPrf": "100",
+      "network": "10.1.0.0/16",
+      "nextHop": "10.0.0.12*",
+      "path": "65515 I\n                    ",
+      "weight": 0
+    },
+    {
+      "locPrf": "100",
+      "network": "10.1.0.0/16",
+      "nextHop": "10.0.0.13",
+      "path": "65515 I\n                    ",
+      "weight": 0
+    },
+    {
+      "locPrf": "100",
+      "network": "10.2.0.0/16",
+      "nextHop": "10.0.0.12*",
+      "path": "65515 I\n                    ",
+      "weight": 0
+    },
+    {
+      "locPrf": "100",
+      "network": "10.2.0.0/16",
+      "nextHop": "10.0.0.13",
+      "path": "65515 I\n                    ",
+      "weight": 0
+    },
+    {
+      "locPrf": "100",
+      "network": "169.254.247.208/30",
+      "nextHop": "169.254.247.209",
+      "path": "133937 I\n                    ",
+      "weight": 0
+    },
+    {
+      "locPrf": "100",
+      "network": "169.254.247.212/30",
+      "nextHop": "169.254.247.209",
+      "path": "133937 I\n                    ",
+      "weight": 0
+    }
+  ]
+}

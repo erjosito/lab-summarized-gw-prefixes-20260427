@@ -1,0 +1,113 @@
+{
+  "etag": "W/\"64cb292f-703a-4a41-81d0-ecc2b4548557\"",
+  "id": "/subscriptions/a8fbd8e1-fb5a-4411-804a-4ac80929c93c/resourceGroups/lab-summarized-gw-prefixes-20260427/providers/Microsoft.Network/virtualNetworks/hub-vnet",
+  "location": "swedencentral",
+  "name": "hub-vnet",
+  "properties": {
+    "addressSpace": {
+      "addressPrefixes": [
+        "10.0.0.0/16"
+      ]
+    },
+    "enableDdosProtection": false,
+    "privateEndpointVNetPolicies": "Disabled",
+    "provisioningState": "Succeeded",
+    "resourceGuid": "769829ab-3b89-4261-adfd-06d148c8a783",
+    "subnets": [
+      {
+        "etag": "W/\"64cb292f-703a-4a41-81d0-ecc2b4548557\"",
+        "id": "/subscriptions/a8fbd8e1-fb5a-4411-804a-4ac80929c93c/resourceGroups/lab-summarized-gw-prefixes-20260427/providers/Microsoft.Network/virtualNetworks/hub-vnet/subnets/GatewaySubnet",
+        "name": "GatewaySubnet",
+        "properties": {
+          "addressPrefix": "10.0.0.0/27",
+          "delegations": [],
+          "ipConfigurations": [
+            {
+              "id": "/subscriptions/59125570-0502-463f-a009-90c0ea70fcd7/resourceGroups/ARMRG-F0410046-F8DD-48AC-9079-C1E7EBDF7303/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/ERGW/VIRTUALMACHINES/0/NETWORKINTERFACES/CUSTNIC/ipConfigurations/IPCONFIG"
+            },
+            {
+              "id": "/subscriptions/59125570-0502-463f-a009-90c0ea70fcd7/resourceGroups/ARMRG-F0410046-F8DD-48AC-9079-C1E7EBDF7303/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/ERGW/VIRTUALMACHINES/1/NETWORKINTERFACES/CUSTNIC/ipConfigurations/IPCONFIG"
+            },
+            {
+              "id": "/subscriptions/a8fbd8e1-fb5a-4411-804a-4ac80929c93c/resourceGroups/LAB-SUMMARIZED-GW-PREFIXES-20260427/providers/Microsoft.Network/virtualNetworkGateways/HUB-ERGW/ipConfigurations/VNETGATEWAYCONFIG0"
+            }
+          ],
+          "privateEndpointNetworkPolicies": "Disabled",
+          "privateLinkServiceNetworkPolicies": "Enabled",
+          "provisioningState": "Succeeded"
+        },
+        "type": "Microsoft.Network/virtualNetworks/subnets"
+      }
+    ],
+    "virtualNetworkPeerings": [
+      {
+        "etag": "W/\"64cb292f-703a-4a41-81d0-ecc2b4548557\"",
+        "id": "/subscriptions/a8fbd8e1-fb5a-4411-804a-4ac80929c93c/resourceGroups/lab-summarized-gw-prefixes-20260427/providers/Microsoft.Network/virtualNetworks/hub-vnet/virtualNetworkPeerings/hub-to-spoke1",
+        "name": "hub-to-spoke1",
+        "properties": {
+          "allowForwardedTraffic": true,
+          "allowGatewayTransit": true,
+          "allowVirtualNetworkAccess": true,
+          "doNotVerifyRemoteGateways": false,
+          "peerCompleteVnets": true,
+          "peeringState": "Connected",
+          "peeringSyncLevel": "FullyInSync",
+          "provisioningState": "Succeeded",
+          "remoteAddressSpace": {
+            "addressPrefixes": [
+              "10.1.0.0/16"
+            ]
+          },
+          "remoteVirtualNetwork": {
+            "id": "/subscriptions/a8fbd8e1-fb5a-4411-804a-4ac80929c93c/resourceGroups/lab-summarized-gw-prefixes-20260427/providers/Microsoft.Network/virtualNetworks/spoke1-vnet"
+          },
+          "remoteVirtualNetworkAddressSpace": {
+            "addressPrefixes": [
+              "10.1.0.0/16"
+            ]
+          },
+          "resourceGuid": "e6f0d543-f82f-09a6-2777-81e18860eaa9",
+          "routeServiceVips": {},
+          "useRemoteGateways": false
+        },
+        "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings"
+      },
+      {
+        "etag": "W/\"64cb292f-703a-4a41-81d0-ecc2b4548557\"",
+        "id": "/subscriptions/a8fbd8e1-fb5a-4411-804a-4ac80929c93c/resourceGroups/lab-summarized-gw-prefixes-20260427/providers/Microsoft.Network/virtualNetworks/hub-vnet/virtualNetworkPeerings/hub-to-spoke2",
+        "name": "hub-to-spoke2",
+        "properties": {
+          "allowForwardedTraffic": true,
+          "allowGatewayTransit": true,
+          "allowVirtualNetworkAccess": true,
+          "doNotVerifyRemoteGateways": false,
+          "peerCompleteVnets": true,
+          "peeringState": "Connected",
+          "peeringSyncLevel": "FullyInSync",
+          "provisioningState": "Succeeded",
+          "remoteAddressSpace": {
+            "addressPrefixes": [
+              "10.2.0.0/16"
+            ]
+          },
+          "remoteVirtualNetwork": {
+            "id": "/subscriptions/a8fbd8e1-fb5a-4411-804a-4ac80929c93c/resourceGroups/lab-summarized-gw-prefixes-20260427/providers/Microsoft.Network/virtualNetworks/spoke2-vnet"
+          },
+          "remoteVirtualNetworkAddressSpace": {
+            "addressPrefixes": [
+              "10.2.0.0/16"
+            ]
+          },
+          "resourceGuid": "f55fbac5-c4e3-03d4-2b05-08c0cacae425",
+          "routeServiceVips": {},
+          "useRemoteGateways": false
+        },
+        "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings"
+      }
+    ]
+  },
+  "tags": {
+    "lab": "true created_by=copilot-lab"
+  },
+  "type": "Microsoft.Network/virtualNetworks"
+}

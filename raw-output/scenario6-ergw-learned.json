@@ -1,0 +1,64 @@
+{
+  "value": [
+    {
+      "asPath": "",
+      "localAddress": "10.0.0.12",
+      "network": "10.2.0.0/16",
+      "origin": "Network",
+      "sourcePeer": "10.0.0.12",
+      "weight": 32768
+    },
+    {
+      "asPath": "",
+      "localAddress": "10.0.0.12",
+      "network": "10.1.0.0/16",
+      "origin": "Network",
+      "sourcePeer": "10.0.0.12",
+      "weight": 32768
+    },
+    {
+      "asPath": "",
+      "localAddress": "10.0.0.12",
+      "network": "10.0.0.0/16",
+      "origin": "Network",
+      "sourcePeer": "10.0.0.12",
+      "weight": 32768
+    },
+    {
+      "asPath": "12076-133937",
+      "localAddress": "10.0.0.12",
+      "network": "169.254.247.212/30",
+      "nextHop": "10.0.0.4",
+      "origin": "EBgp",
+      "sourcePeer": "10.0.0.4",
+      "weight": 32779
+    },
+    {
+      "asPath": "12076-133937",
+      "localAddress": "10.0.0.12",
+      "network": "169.254.247.212/30",
+      "nextHop": "10.0.0.5",
+      "origin": "EBgp",
+      "sourcePeer": "10.0.0.5",
+      "weight": 32779
+    },
+    {
+      "asPath": "12076-133937",
+      "localAddress": "10.0.0.12",
+      "network": "169.254.247.208/30",
+      "nextHop": "10.0.0.4",
+      "origin": "EBgp",
+      "sourcePeer": "10.0.0.4",
+      "weight": 32779
+    },
+    {
+      "asPath": "12076-133937",
+      "localAddress": "10.0.0.12",
+      "network": "169.254.247.208/30",
+      "nextHop": "10.0.0.5",
+      "origin": "EBgp",
+      "sourcePeer": "10.0.0.5",
+      "weight": 32779
+    }
+  ]
+}
